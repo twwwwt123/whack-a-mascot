@@ -47,6 +47,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        hole: {
+          DEFAULT: "hsl(var(--hole))",
+          inner: "hsl(var(--hole-inner))",
+        },
+        mole: {
+          body: "hsl(var(--mole-body))",
+          cheek: "hsl(var(--mole-cheek))",
+        },
+        grass: {
+          light: "hsl(var(--grass-light))",
+          dark: "hsl(var(--grass-dark))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
