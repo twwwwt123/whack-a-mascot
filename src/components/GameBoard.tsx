@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import Mole from "./Mole";
+import Mole, { MoleSVG } from "./Mole";
 
 type GameState = "idle" | "playing";
 
@@ -127,11 +127,14 @@ const GameBoard = () => {
     <div className="flex flex-col items-center min-h-screen bg-background px-4 py-6 select-none">
       {/* Header */}
       <div className="flex items-center justify-between w-full max-w-md mb-4">
-        <h1 className="text-xl font-black text-primary text-shadow-game">
-          🐭 不规则打地鼠
-        </h1>
+        <div className="flex items-center gap-1.5">
+          <MoleSVG size={28} />
+          <h1 className="text-xl font-black text-primary text-shadow-game">
+            打地鼠
+          </h1>
+        </div>
         <div className="bg-secondary/80 rounded-xl px-4 py-1.5 font-black text-secondary-foreground text-lg">
-          💯 {score}
+          计分 {score}
         </div>
       </div>
 
