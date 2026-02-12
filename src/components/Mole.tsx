@@ -48,14 +48,16 @@ const Mole = ({ isUp, onWhack }: MoleProps) => {
           </div>
         </div>
       </div>
-      {/* Clickable overlay */}
-      {isUp && !isHit && (
-        <button
-          onClick={handleClick}
-          className="absolute inset-0 z-10 cursor-pointer"
-          aria-label="打地鼠"
-        />
-      )}
+      {/* Clickable overlay - always present for consistent touch targets */}
+      <button
+        onPointerDown={(e) => {
+          e.preventDefault();
+          handleClick();
+        }}
+        className="absolute inset-0 z-10 cursor-pointer"
+        style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
+        aria-label="打地鼠"
+      />
     </div>
   );
 };

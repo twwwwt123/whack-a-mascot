@@ -164,7 +164,7 @@ const GameBoard = () => {
         {Array.from({ length: 20 }).map((_, i) => (
           <div
             key={`grass-${i}`}
-            className="absolute w-2 h-2 rounded-full bg-grass-dark/30"
+            className="absolute w-2 h-2 rounded-full bg-grass-dark/30 pointer-events-none"
             style={{
               left: `${5 + Math.random() * 90}%`,
               top: `${5 + Math.random() * 90}%`,
@@ -189,7 +189,7 @@ const GameBoard = () => {
 
         {/* Idle overlay */}
         {gameState === "idle" && (
-          <div className="absolute inset-0 bg-foreground/20 backdrop-blur-[2px] flex items-center justify-center rounded-3xl">
+          <div className="absolute inset-0 bg-foreground/20 backdrop-blur-[2px] flex items-center justify-center rounded-3xl pointer-events-none">
             <p className="text-primary font-black text-2xl text-shadow-game">
               👆 点击开始
             </p>
